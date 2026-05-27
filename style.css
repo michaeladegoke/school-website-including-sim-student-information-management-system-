@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.9),
+     rgba(4,9,30,0.7)), url(images/background1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 50px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 8px 12px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.nav-links ul li::after {
+    content: "";
+    margin: auto;
+    width: 0%;
+    display: block;
+    height: 2px;
+    background-color: #f44366;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.text-box {
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 50px;
+}
+
+.text-box p{
+    margin: 10px 0px 40px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 34px;
+    font-size: 12px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-button:hover{
+    border: 1px solid #f44366;
+    transition: 0.1s;
+    background: #f44366;
+}
+/*re-usable*/
+.section {
+     width: 80%;
+    padding-top: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+/*........School Categories Section.........*/
+h1 {
+    font-size: 36px;
+    font-weight: 600px;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.school-column {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+   /* margin-bottom: 5%;*/
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 20px 12px;
+}
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.school-column:hover{
+    box-shadow: 0 0 20px 0px rgba(221, 4, 4, 0.2);
+}
+/*........teachers Section.........*/
+
+.teachers-wrapper{
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.teachers-row {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.teachers-row::-webkit-scrollbar{
+    display: none;
+}
+.teachers-column {
+    flex: 0 0 calc(33.33% - 14px);
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.teachers-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* overlay effect */
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* arrows */
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.left-arrow{
+    left: -10px;
+}
+
+.right-arrow{
+    right: -10px;
+}
+.arrow:hover{
+    background: #f44366;
+}
+/*---------Facilities---------*/
+.facilities-col {
+     flex-basis: 32%;
+    border-radius: 10px;
+    text-align: left;
+    /*margin-bottom: 5%; */
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+/*----------testimonial section----------*/
+
+.Testimonial-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    padding: 25px;
+    display: flex; 
+    background: #fff3f3;
+    margin-bottom: 5%;
+}
+
+.Testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.Testimonial-col p {
+    padding: 0;
+}
+.Testimonial-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+.Testimonial-col .fa {
+    color: #f44366;
+}
+/*cta section*/
+.cta{
+    height: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(4,9,30,0.9),
+     rgba(4,9,30,0.7)), url(images/background1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.cta h1 {
+    color: #ffffff;
+    margin-bottom: 40px;
+    pad: 0;
+}
+/*-----footer-----*/
+.footer {
+    width: 60%;
+    padding: 30px 0;
+    text-align: center;
+    margin: auto;
+}
+.footer h4 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.icon .fa-brands {
+    color: #f44366;
+    margin: 0 13px;
+    padding: 0 18px;
+    cursor: pointer;
+}
+.fa-heart{
+    color: #f44366;
+}
+
+/*about-us page */
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(4,9,30,0.9),
+     rgba(4,9,30,0.9)), url(images/backgroung.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.sub-header h1 {
+    margin-top: 100px;
+
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img {
+    width: 100%;
+}
+.about-col h1 {
+    padding: 0;
+}
+.about-col p {
+    padding: 15px 0 25px;
+}
+.red-btn {
+    border: 1px solid #f44366;
+    background: transparent;
+    color: #f44366;
+}
+.red-btn:hover {
+    color: white;
+}
+
+/*----------BLOG PAGE-----------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left{
+    flex-basis: 65%;
+    text-align: left;
+}
+
+.blog-left img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blog-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.blog-left p{
+    color: #777;
+    padding: 0;
+}
+
+.blog-right{
+    flex-basis: 32%;
+}
+
+.blog-right h3{
+    background: #f44366;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.blog-right div{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+/*------COMMENT BOX-------*/
+
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comment-box h3{
+    text-align: left;
+}
+
+.comment-form input,
+.comment-form textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+.comment-form button{
+    margin: 10px 0;
+}
+
+/*----------CONTACT PAGE-----------*/
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa-solid{
+    font-size: 28px;
+    color: #f44366;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/*----------MOBILE RESPONSIVENESS-----------*/
+
+@media(max-width: 700px){
+
+    .row{
+        flex-direction: column;
+    }
+
+    .contact-col{
+        flex-basis: 100%;
+    }
+}
+/*----------MOBILE RESPONSIVENESS-----------*/
+
+@media(max-width: 700px){
+
+    .row{
+        flex-direction: column;
+    }
+
+    .blog-left,
+    .blog-right{
+        flex-basis: 100%;
+    }
+
+    .blog-right{
+        margin-top: 40px;
+    }
+
+    .blog-left h2{
+        font-size: 24px;
+    }
+}
