@@ -1,0 +1,127 @@
+# student-dashboard.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h2>Student Panel</h2>
+
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-book"></i> Subjects</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-file"></i> Results</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-money-bill"></i> Fees</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="topbar">
+          <h1>Welcome, Michael</h1>
+
+          <div class="profile">
+            <img src="https://i.pravatar.cc/100" alt="Student Profile" />
+            <span>Student</span>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+          <div class="card">
+            <i class="fa-solid fa-book-open"></i>
+            <h2>9</h2>
+            <p>Registered Subjects</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h2>3rd</h2>
+            <p>Class Position</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-school"></i>
+            <h2>JSS 2</h2>
+            <p>Current Class</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-wallet"></i>
+            <h2>₦50,000</h2>
+            <p>Outstanding Fees</p>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-section">
+          <h2>Recent Activities</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Assignment</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Mathematics</td>
+                <td>Algebra Test</td>
+                <td><span class="status paid">Completed</span></td>
+              </tr>
+
+              <tr>
+                <td>English</td>
+                <td>Essay Writing</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+
+              <tr>
+                <td>Computer Science</td>
+                <td>HTML Project</td>
+                <td><span class="status paid">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
