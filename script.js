@@ -47,3 +47,14 @@
 
   // move every 3 seconds
   setInterval(autoSlide, 3000);
+
+
+  //login
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function closeLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+

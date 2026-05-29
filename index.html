@@ -22,6 +22,7 @@
             <li><a href="courses.html">Courses</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="login-btn" onclick="openLogin()">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -264,7 +265,24 @@
       </p>
     </section>
     </section>
+<!--loginbutton-->
+    <div class="login-modal" id="loginModal">
+  <div class="login-box">
 
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <h2>Student Login</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
