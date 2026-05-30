@@ -713,13 +713,12 @@ table th {
   background: orange;
 }
 
-@media (max-width: 768px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
+/* sidebar pages*/
+.page {
+  margin-left: 250px;
+  padding: 20px;
 }
 
+.page h1 {
+  margin-bottom: 20px;
+}
