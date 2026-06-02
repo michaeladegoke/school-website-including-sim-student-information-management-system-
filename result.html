@@ -2,19 +2,302 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<div class="page">
-  <h1>Results</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Fees</title>
 
-  <table>
-    <tr><th>Subject</th><th>Score</th></tr>
-    <tr><td>Math</td><td>85</td></tr>
-    <tr><td>English</td><td>78</td></tr>
-    <tr><td>Computer</td><td>92</td></tr>
-  </table>
-</div>, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+  <div class="result-sheet">
+    <div class="main-content">
+       <div class="school-header">
+
+    <img src="images/LOGO.png" alt="School Logo">
+
+    <div>
+        <h1>COURAGE GROUP OF SCHOOLS</h1>
+        <p>Knowledge • Discipline • Excellence</p>
+        <p>2025/2026 Academic Session Result</p>
+    </div>
+
+</div>
+
+    <div class="topbar">
+        <h1>Student Result Portal</h1>
+    </div>
+
+    <!-- FILTER SECTION -->
+    <div class="result-filter">
+
+        <div class="filter-group">
+            <label>Academic Session</label>
+            <select>
+                <option>2025/2026</option>
+                <option>2024/2025</option>
+                <option>2023/2024</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Class</label>
+            <select>
+                <option>JSS 1</option>
+                <option selected>JSS 2</option>
+                <option>JSS 3</option>
+                <option>SS 1</option>
+                <option>SS 2</option>
+                <option>SS 3</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Term</label>
+            <select>
+                <option selected>First Term</option>
+                <option>Second Term</option>
+                <option>Third Term</option>
+            </select>
+        </div>
+
+        <button class="view-result-btn">
+            View Result
+        </button>
+
+    </div>
+
+    <!-- STUDENT DETAILS -->
+    <div class="student-info-card">
+
+        <h2>Student Information</h2>
+
+        <div class="student-details">
+
+            <div>
+                <strong>Name:</strong> Michael Johnson
+            </div>
+
+            <div>
+                <strong>Admission No:</strong> CGS/2025/001
+            </div>
+
+            <div>
+                <strong>Class:</strong> JSS 2
+            </div>
+
+            <div>
+                <strong>Session:</strong> 2025/2026
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RESULT SUMMARY -->
+    <div class="result-summary">
+
+        <div class="result-box">
+            <h2>85%</h2>
+            <p>Average Score</p>
+        </div>
+
+        <div class="result-box">
+            <h2>3rd</h2>
+            <p>Class Position</p>
+        </div>
+
+        <div class="result-box">
+            <h2>9</h2>
+            <p>Subjects Offered</p>
+        </div>
+
+        <div class="result-box">
+            <h2>A</h2>
+            <p>Overall Grade</p>
+        </div>
+
+    </div>
+
+    <!-- RESULT TABLE -->
+    <div class="table-section">
+
+        <h2>Academic Performance</h2>
+
+        <table>
+            
+<thead>
+<tr>
+    <th>Subject</th>
+    <th>Test (30)</th>
+    <th>Exam (70)</th>
+    <th>Total (100)</th>
+    <th>Grade</th>
+    <th>Remark</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>Mathematics</td>
+    <td>26</td>
+    <td>59</td>
+    <td>85</td>
+    <td>A</td>
+    <td>Excellent</td>
+</tr>
+
+<tr>
+    <td>English Language</td>
+    <td>24</td>
+    <td>54</td>
+    <td>78</td>
+    <td>B</td>
+    <td>Very Good</td>
+</tr>
+
+<tr>
+    <td>Computer Science</td>
+    <td>28</td>
+    <td>64</td>
+    <td>92</td>
+    <td>A</td>
+    <td>Excellent</td>
+</tr>
+
+<tr>
+    <td>Physics</td>
+    <td>25</td>
+    <td>55</td>
+    <td>80</td>
+    <td>A</td>
+    <td>Excellent</td>
+</tr>
+
+<tr>
+    <td>Chemistry</td>
+    <td>22</td>
+    <td>52</td>
+    <td>74</td>
+    <td>B</td>
+    <td>Very Good</td>
+</tr>
+
+<tr>
+    <td>Biology</td>
+    <td>27</td>
+    <td>61</td>
+    <td>88</td>
+    <td>A</td>
+    <td>Excellent</td>
+</tr>
+
+<tr>
+    <td>Economics</td>
+    <td>23</td>
+    <td>53</td>
+    <td>76</td>
+    <td>B</td>
+    <td>Very Good</td>
+</tr>
+
+<tr>
+    <td>Government</td>
+    <td>25</td>
+    <td>57</td>
+    <td>82</td>
+    <td>A</td>
+    <td>Excellent</td>
+</tr>
+
+<tr>
+    <td>Geography</td>
+    <td>24</td>
+    <td>55</td>
+    <td>79</td>
+    <td>B</td>
+    <td>Very Good</td>
+</tr>
+
+</tbody>
+        </table>
+<div class="result-statistics">
+
+    <div class="stat-box">
+        <h3>Total Mark Obtainable</h3>
+        <p>900</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Total Mark Obtained</h3>
+        <p>734</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Percentage</h3>
+        <p>81.6%</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Position</h3>
+        <p>3rd</p>
+    </div>
+
+</div>
+
+
+        <div class="result-actions">
+
+            <button class="download-btn">
+                Download Result
+            </button>
+
+            <button class="print-btn" onclick="window.print()">
+                Print Result
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ATTENDANCE -->
+    <div class="attendance-card">
+
+        <h2>Attendance Record</h2>
+
+        <p><strong>School Opened:</strong> 70 Days</p>
+        <p><strong>Present:</strong> 67 Days</p>
+        <p><strong>Absent:</strong> 3 Days</p>
+
+    </div>
+
+    <!-- TEACHER REMARK -->
+    <div class="remark-card">
+
+        <h2>Class Teacher's Remark</h2>
+
+        <p>
+            Michael has demonstrated excellent academic performance
+            throughout the term. Keep up the good work.
+        </p>
+
+    </div>
+
+    <!-- PRINCIPAL REMARK -->
+    <div class="remark-card">
+
+        <h2>Principal's Remark</h2>
+
+        <p>
+            Outstanding performance. Continue striving for excellence.
+        </p>
+
+    </div>
+
+</div>
+  </div>
+
 </body>
 </html>
