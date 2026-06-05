@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6f9;
+}
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#1e3a5f;
+    color:white;
+    position:fixed;
+}
+ .logo{
+    text-align:center;
+    padding:20px 10px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.logo img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.logo p{
+    font-size:14px;
+    color:#ddd;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+.sidebar ul li:hover{
+    background:#294c7a;
+}
+
+.main-content{
+    margin-left:250px;
+    width:100%;
+    padding:20px;
+}
+
+header{
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card h3{
+    color:#1e3a5f;
+    font-size:30px;
+}
+
+.recent{
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+table th{
+    background:#1e3a5f;
+    color:white;
+}
+
+/* student admin page*/
+.students-page{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    margin: 0 auto;
+}
+
+.students-page .container{
+    width:100%;
+    max-width:1100px;
+}
+
+.container{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    background:#f4f6f9;
+    padding:30px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.add-btn{
+    background:#1e3a5f;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    flex:1;
+    padding:10px;
+}
+
+.search-box button{
+    background:#1e3a5f;
+    color:white;
+    border:none;
+    padding:10px 20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+table th{
+    background:#1e3a5f;
+    color:white;
+}
+
+td img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.view{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:7px 12px;
+}
+
+.edit{
+    background:#ffc107;
+    border:none;
+    padding:7px 12px;
+}
+
+.delete{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:7px 12px;
+}
+/* =========================
+   TEACHER ADMIN DASHBOARD
+   ========================= */
+
+/* Sidebar */
+.teacher-sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e3a8a;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.teacher-sidebar h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.teacher-sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.teacher-sidebar a:hover {
+  background: #3b82f6;
+}
+
+/* Main content */
+.teacher-main {
+  margin-left: 220px;
+  padding: 20px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.teacher-header {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Dashboard cards */
+.teacher-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.teacher-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.teacher-card h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.teacher-card p {
+  font-size: 24px;
+  font-weight: bold;
+}

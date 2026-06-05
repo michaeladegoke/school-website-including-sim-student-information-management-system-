@@ -1,0 +1,70 @@
+/*student profile page */
+.profile-card{
+    background:#fff;
+    max-width:800px;
+    margin:auto;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.profile-card img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #2563eb;
+    margin-bottom:15px;
+}
+
+.profile-card h2{
+    color:#1e3a8a;
+    margin-bottom:5px;
+}
+
+.profile-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.profile-card hr{
+    margin:25px 0;
+    border:none;
+    border-top:1px solid #eee;
+}
+
+.profile-info{
+    text-align:left;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-row span{
+    color:#555;
+    font-weight:600;
+}
+
+.info-row i{
+    color:#2563eb;
+    margin-right:8px;
+}
+
+.btn{
+    margin-top:25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}

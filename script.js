@@ -48,13 +48,43 @@
   // move every 3 seconds
   setInterval(autoSlide, 3000);
 
+document.addEventListener("DOMContentLoaded", function () {
 
-  //login
-function openLogin() {
-    document.getElementById("loginModal").style.display = "flex";
-}
+    const modal = document.getElementById("loginModal");
+    const openBtn = document.querySelector(".login-btn");
+    const closeBtn = document.querySelector(".modal-content span");
+    const form = document.getElementById("loginForm");
 
-function closeLogin() {
-    document.getElementById("loginModal").style.display = "none";
-}
+    // OPEN
+    openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "flex";
+    });
 
+    // CLOSE
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // CLOSE OUTSIDE
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // LOGIN
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "student" && password === "1234") {
+            window.location.href = "student-dashboard/student-dashboard.html";
+        } else {
+            alert("Invalid login details");
+        }
+    });
+
+});
