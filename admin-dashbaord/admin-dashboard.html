@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Dashboard</title>
+
 <link rel="stylesheet" href="../css/admin-dashboard.css">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -11,97 +12,107 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body>
 
-<div class="sidebar">
+<div class="admin-layout">
 
-   <div class="logo">
-    <img src="../images/LOGO.png" alt="School Logo">
-    <h2>Courage Group of Schools</h2>
-    <p>Admin Portal</p>
-</div>
+    <!-- ================= SIDEBAR ================= -->
+    <div class="admin-sidebar">
 
-    <ul>
-        <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
-        <li><a href="admin-student-page.html"><i class="fas fa-user-graduate"></i> Students</a></li>
-        <li><a href="admin-teacher-page.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a></li>
-        <li><a href="#"><i class="fas fa-school"></i> Classes</a></li>
-        <li><a href="#"><i class="fas fa-book"></i> Subjects</a></li>
-        <li><a href="#"><i class="fas fa-file-alt"></i> Results</a></li>
-        <li><a href="#"><i class="fas fa-money-bill"></i> School Fees</a></li>
-        <li><a href="#"><i class="fas fa-calendar-check"></i> Attendance</a></li>
-        <li><a href="#"><i class="fas fa-bullhorn"></i> Announcements</a></li>
-        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul>
+        <h2>Courage Group of Schools</h2>
 
-</div>
+        <a href="admin-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="admin-student-page.html"><i class="fas fa-user-graduate"></i> Students</a>
+        <a href="admin-teacher-page.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+        <a href="admin-class-page.html"><i class="fas fa-school"></i> Classes</a>
+        <a href="admin-subject-page.html"><i class="fas fa-book"></i> Subjects</a>
+        <a href="admin-result-page.html"><i class="fas fa-file-alt"></i> Results</a>
+        <a href="admin-fee-page.html"><i class="fas fa-money-bill"></i> School Fees</a>
+        <a href="admin-attendance-page.html"><i class="fas fa-calendar-check"></i> Attendance</a>
+        <a href="admin-anouncement.html"><i class="fas fa-bullhorn"></i> Announcements</a>
+        <a href="admin-setting.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="admin-logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
-<div class="main-content">
+    </div>
 
-    <header>
-        <h1>Admin Dashboard</h1>
-        <p>Welcome Administrator</p>
-    </header>
+    <!-- ================= MAIN CONTENT ================= -->
+    <div class="admin-main">
 
-    <section class="cards">
+        <!-- HEADER -->
+        <header class="page-header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome Administrator</p>
+            </div>
+        </header>
 
-        <div class="card">
-            <h3>500</h3>
-            <p>Total Students</p>
-        </div>
+        <!-- CARDS -->
+        <section class="class-cards">
 
-        <div class="card">
-            <h3>35</h3>
-            <p>Total Teachers</p>
-        </div>
+            <div class="class-card">
+                <h3>500</h3>
+                <p>Total Students</p>
+            </div>
 
-        <div class="card">
-            <h3>12</h3>
-            <p>Classes</p>
-        </div>
+            <div class="class-card">
+                <h3>35</h3>
+                <p>Total Teachers</p>
+            </div>
 
-        <div class="card">
-            <h3>9</h3>
-            <p>Subjects</p>
-        </div>
+            <div class="class-card">
+                <h3>12</h3>
+                <p>Classes</p>
+            </div>
 
-        <div class="card">
-            <h3>₦8,500,000</h3>
-            <p>Fees Collected</p>
-        </div>
+            <div class="class-card">
+                <h3>9</h3>
+                <p>Subjects</p>
+            </div>
 
-        <div class="card">
-            <h3>₦1,200,000</h3>
-            <p>Pending Fees</p>
-        </div>
+            <div class="class-card">
+                <h3>₦8,500,000</h3>
+                <p>Fees Collected</p>
+            </div>
 
-    </section>
+            <div class="class-card">
+                <h3>₦1,200,000</h3>
+                <p>Pending Fees</p>
+            </div>
 
-    <section class="recent">
-        <h2>Recent Activities</h2>
+        </section>
 
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Activity</th>
-            </tr>
+        <!-- RECENT ACTIVITY -->
+        <section class="table-container" style="margin-top: 30px;">
 
-            <tr>
-                <td>04/06/2026</td>
-                <td>New Student Registered</td>
-            </tr>
+            <h2 style="padding:15px;">Recent Activities</h2>
 
-            <tr>
-                <td>04/06/2026</td>
-                <td>Results Uploaded</td>
-            </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
 
-            <tr>
-                <td>03/06/2026</td>
-                <td>School Fees Paid</td>
-            </tr>
+                <tbody>
+                    <tr>
+                        <td>04/06/2026</td>
+                        <td>New Student Registered</td>
+                    </tr>
 
-        </table>
-    </section>
+                    <tr>
+                        <td>04/06/2026</td>
+                        <td>Results Uploaded</td>
+                    </tr>
+
+                    <tr>
+                        <td>03/06/2026</td>
+                        <td>School Fees Paid</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </div>
 
 </div>
 

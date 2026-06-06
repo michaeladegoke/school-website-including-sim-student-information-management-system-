@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Management</title>
+
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR (MATCHES TEACHER PAGE) ================= -->
+    <div class="admin-sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <a href="admin-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="admin-student-page.html"><i class="fas fa-user-graduate"></i> Students</a>
+        <a href="admin-teacher-page.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+        <a href="admin-class-page.html"><i class="fas fa-school"></i> Classes</a>
+        <a href="admin-subject-page.html"><i class="fas fa-book"></i> Subjects</a>
+        <a href="admin-result-page.html"><i class="fas fa-file-alt"></i> Results</a>
+        <a href="admin-fee-page.html"><i class="fas fa-money-bill"></i> Fees</a>
+        <a href="admin-attendance-page.html"><i class="fas fa-calendar-check"></i> Attendance</a>
+        <a href="admin-anouncement.html"><i class="fas fa-bullhorn"></i> Announcements</a>
+        <a href="admin-anouncement.html"><i class="fas fa-envelope"></i> Messages</a>
+        <a href="admin-setting.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="admin-logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+    </div>
+
+    <!-- ================= MAIN CONTENT (FIXED) ================= -->
+    <div class="admin-main">
+
+        <div class="container">
+
+            <!-- HEADER -->
+            <header class="page-header">
+
+                <div>
+                    <h1>Results Management</h1>
+                    <p>View and manage student academic results</p>
+                </div>
+
+                <button class="add-btn">
+                    <i class="fas fa-plus"></i>
+                    Add Result
+                </button>
+
+            </header>
+
+            <!-- SEARCH & FILTER -->
+            <div class="search-section">
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search student name or ID">
+
+                    <button>
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+
+                <div class="filter-box">
+
+                    <select>
+                        <option>All Classes</option>
+                        <option>JSS1</option>
+                        <option>JSS2</option>
+                        <option>JSS3</option>
+                        <option>SS1</option>
+                        <option>SS2</option>
+                        <option>SS3</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- RESULTS TABLE -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Subject</th>
+                            <th>CA (40)</th>
+                            <th>Exam (60)</th>
+                            <th>Total (100)</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>ST001</td>
+                            <td>Michael Adegoke</td>
+                            <td>SS2</td>
+                            <td>Mathematics</td>
+                            <td>30</td>
+                            <td>55</td>
+                            <td>85</td>
+                            <td>A</td>
+
+                            <td class="action-btns">
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>ST002</td>
+                            <td>Grace Johnson</td>
+                            <td>JSS3</td>
+                            <td>English</td>
+                            <td>28</td>
+                            <td>50</td>
+                            <td>78</td>
+                            <td>B</td>
+
+                            <td class="action-btns">
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>ST003</td>
+                            <td>David Williams</td>
+                            <td>SS1</td>
+                            <td>Basic Science</td>
+                            <td>25</td>
+                            <td>40</td>
+                            <td>65</td>
+                            <td>C</td>
+
+                            <td class="action-btns">
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

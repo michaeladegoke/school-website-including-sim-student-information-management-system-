@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management</title>
+    <title>School Fees Management</title>
 
     <link rel="stylesheet" href="../css/admin-dashboard.css">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <div class="admin-layout">
 
-    <!-- SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
     <div class="admin-sidebar">
 
         <h2>Admin Panel</h2>
@@ -34,56 +35,31 @@
 
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ================= MAIN CONTENT ================= -->
     <div class="admin-main">
 
         <div class="container">
 
-            <!-- PAGE HEADER -->
+            <!-- HEADER -->
             <header class="page-header">
 
                 <div>
-                    <h1>Student Management</h1>
-                    <p>Manage all registered students in the school system</p>
+                    <h1>School Fees Management</h1>
+                    <p>Track student payments and financial records</p>
                 </div>
 
                 <button class="add-btn">
-                    <i class="fas fa-user-plus"></i>
-                    Add Student
+                    <i class="fas fa-plus"></i>
+                    Record Payment
                 </button>
 
             </header>
 
-            <!-- SUMMARY CARDS -->
-            <div class="class-cards">
-
-                <div class="class-card">
-                    <h3>Total Students</h3>
-                    <p>500</p>
-                </div>
-
-                <div class="class-card">
-                    <h3>Boys</h3>
-                    <p>260</p>
-                </div>
-
-                <div class="class-card">
-                    <h3>Girls</h3>
-                    <p>240</p>
-                </div>
-
-                <div class="class-card">
-                    <h3>Active</h3>
-                    <p>495</p>
-                </div>
-
-            </div>
-
-            <!-- SEARCH -->
+            <!-- SEARCH & FILTER -->
             <div class="search-section">
 
                 <div class="search-box">
-                    <input type="text" placeholder="Search student by name or ID">
+                    <input type="text" placeholder="Search student name or ID">
 
                     <button>
                         <i class="fas fa-search"></i>
@@ -107,25 +83,47 @@
 
             </div>
 
+            <!-- SUMMARY CARDS -->
+            <div class="class-cards">
+
+                <div class="class-card">
+                    <h3>Total Students</h3>
+                    <p>200</p>
+                </div>
+
+                <div class="class-card">
+                    <h3>Paid</h3>
+                    <p>150</p>
+                </div>
+
+                <div class="class-card">
+                    <h3>Unpaid</h3>
+                    <p>50</p>
+                </div>
+
+                <div class="class-card">
+                    <h3>Total Revenue</h3>
+                    <p>₦3,500,000</p>
+                </div>
+
+            </div>
+
             <!-- TABLE -->
             <div class="table-container">
 
                 <table>
 
                     <thead>
-
                         <tr>
                             <th>S/N</th>
-                            <th>ID</th>
-                            <th>Photo</th>
-                            <th>Full Name</th>
+                            <th>Student ID</th>
+                            <th>Name</th>
                             <th>Class</th>
-                            <th>Gender</th>
-                            <th>Parent Phone</th>
+                            <th>Amount</th>
                             <th>Status</th>
+                            <th>Payment Date</th>
                             <th>Action</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
@@ -133,101 +131,66 @@
                         <tr>
                             <td>1</td>
                             <td>ST001</td>
-
-                            <td>
-                                <img src="../images/t2.jfif"
-                                     class="student-img"
-                                     alt="Student">
-                            </td>
-
                             <td>Michael Adegoke</td>
                             <td>SS2</td>
-                            <td>Male</td>
-                            <td>08012345678</td>
+                            <td>₦50,000</td>
 
                             <td>
-                                <span class="status active">
-                                    Active
-                                </span>
+                                <span class="status active">Paid</span>
                             </td>
+
+                            <td>2026-06-01</td>
 
                             <td class="action-btns">
-
-                                <button class="view">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-
-                                <button class="edit">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-
-                                <button class="delete">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
                             </td>
-
                         </tr>
 
                         <tr>
                             <td>2</td>
                             <td>ST002</td>
-
-                            <td>
-                                <img src="../images/t2.jfif"
-                                     class="student-img"
-                                     alt="Student">
-                            </td>
-
                             <td>Grace Johnson</td>
                             <td>JSS3</td>
-                            <td>Female</td>
-                            <td>08087654321</td>
+                            <td>₦50,000</td>
 
                             <td>
-                                <span class="status active">
-                                    Active
-                                </span>
+                                <span class="status active">Paid</span>
                             </td>
+
+                            <td>2026-06-02</td>
 
                             <td class="action-btns">
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
 
-                                <button class="view">
-                                    <i class="fas fa-eye"></i>
-                                </button>
+                        <tr>
+                            <td>3</td>
+                            <td>ST003</td>
+                            <td>David Williams</td>
+                            <td>SS1</td>
+                            <td>₦50,000</td>
 
-                                <button class="edit">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-
-                                <button class="delete">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-
+                            <td>
+                                <span class="status inactive">Unpaid</span>
                             </td>
 
+                            <td>Not Paid</td>
+
+                            <td class="action-btns">
+                                <button class="view"><i class="fas fa-eye"></i></button>
+                                <button class="edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
                         </tr>
 
                     </tbody>
 
                 </table>
-
-            </div>
-
-            <!-- PAGINATION -->
-            <div class="pagination">
-
-                <button>
-                    Previous
-                </button>
-
-                <span>
-                    Page 1 of 10
-                </span>
-
-                <button>
-                    Next
-                </button>
 
             </div>
 

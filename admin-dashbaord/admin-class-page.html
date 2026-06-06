@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management</title>
+    <title>Classes Management</title>
 
     <link rel="stylesheet" href="../css/admin-dashboard.css">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <div class="admin-layout">
 
-    <!-- SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
     <div class="admin-sidebar">
 
         <h2>Admin Panel</h2>
@@ -34,7 +35,7 @@
 
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ================= MAIN CONTENT ================= -->
     <div class="admin-main">
 
         <div class="container">
@@ -43,13 +44,13 @@
             <header class="page-header">
 
                 <div>
-                    <h1>Student Management</h1>
-                    <p>Manage all registered students in the school system</p>
+                    <h1>Classes Management</h1>
+                    <p>Manage all school classes and assignments</p>
                 </div>
 
                 <button class="add-btn">
-                    <i class="fas fa-user-plus"></i>
-                    Add Student
+                    <i class="fas fa-plus"></i>
+                    Add Class
                 </button>
 
             </header>
@@ -58,23 +59,23 @@
             <div class="class-cards">
 
                 <div class="class-card">
+                    <h3>Total Classes</h3>
+                    <p>6</p>
+                </div>
+
+                <div class="class-card">
                     <h3>Total Students</h3>
                     <p>500</p>
                 </div>
 
                 <div class="class-card">
-                    <h3>Boys</h3>
-                    <p>260</p>
+                    <h3>Total Teachers</h3>
+                    <p>30</p>
                 </div>
 
                 <div class="class-card">
-                    <h3>Girls</h3>
-                    <p>240</p>
-                </div>
-
-                <div class="class-card">
-                    <h3>Active</h3>
-                    <p>495</p>
+                    <h3>Total Subjects</h3>
+                    <p>18</p>
                 </div>
 
             </div>
@@ -83,26 +84,12 @@
             <div class="search-section">
 
                 <div class="search-box">
-                    <input type="text" placeholder="Search student by name or ID">
+                    <input type="text" placeholder="Search class name or teacher">
 
                     <button>
                         <i class="fas fa-search"></i>
                         Search
                     </button>
-                </div>
-
-                <div class="filter-box">
-
-                    <select>
-                        <option>All Classes</option>
-                        <option>JSS1</option>
-                        <option>JSS2</option>
-                        <option>JSS3</option>
-                        <option>SS1</option>
-                        <option>SS2</option>
-                        <option>SS3</option>
-                    </select>
-
                 </div>
 
             </div>
@@ -113,43 +100,26 @@
                 <table>
 
                     <thead>
-
                         <tr>
                             <th>S/N</th>
-                            <th>ID</th>
-                            <th>Photo</th>
-                            <th>Full Name</th>
                             <th>Class</th>
-                            <th>Gender</th>
-                            <th>Parent Phone</th>
-                            <th>Status</th>
+                            <th>Class Teacher</th>
+                            <th>Students</th>
+                            <th>Subjects</th>
+                            <th>Attendance</th>
                             <th>Action</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
 
                         <tr>
                             <td>1</td>
-                            <td>ST001</td>
-
-                            <td>
-                                <img src="../images/t2.jfif"
-                                     class="student-img"
-                                     alt="Student">
-                            </td>
-
-                            <td>Michael Adegoke</td>
-                            <td>SS2</td>
-                            <td>Male</td>
-                            <td>08012345678</td>
-
-                            <td>
-                                <span class="status active">
-                                    Active
-                                </span>
-                            </td>
+                            <td>JSS1</td>
+                            <td>Mrs Grace Bello</td>
+                            <td>80</td>
+                            <td>12</td>
+                            <td>95%</td>
 
                             <td class="action-btns">
 
@@ -166,29 +136,15 @@
                                 </button>
 
                             </td>
-
                         </tr>
 
                         <tr>
                             <td>2</td>
-                            <td>ST002</td>
-
-                            <td>
-                                <img src="../images/t2.jfif"
-                                     class="student-img"
-                                     alt="Student">
-                            </td>
-
-                            <td>Grace Johnson</td>
-                            <td>JSS3</td>
-                            <td>Female</td>
-                            <td>08087654321</td>
-
-                            <td>
-                                <span class="status active">
-                                    Active
-                                </span>
-                            </td>
+                            <td>JSS2</td>
+                            <td>Mr John Ade</td>
+                            <td>85</td>
+                            <td>13</td>
+                            <td>92%</td>
 
                             <td class="action-btns">
 
@@ -205,7 +161,31 @@
                                 </button>
 
                             </td>
+                        </tr>
 
+                        <tr>
+                            <td>3</td>
+                            <td>SS1</td>
+                            <td>Mrs Esther James</td>
+                            <td>70</td>
+                            <td>14</td>
+                            <td>90%</td>
+
+                            <td class="action-btns">
+
+                                <button class="view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+
+                                <button class="edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+
+                                <button class="delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+
+                            </td>
                         </tr>
 
                     </tbody>
@@ -217,17 +197,9 @@
             <!-- PAGINATION -->
             <div class="pagination">
 
-                <button>
-                    Previous
-                </button>
-
-                <span>
-                    Page 1 of 10
-                </span>
-
-                <button>
-                    Next
-                </button>
+                <button>Previous</button>
+                <span>Page 1 of 1</span>
+                <button>Next</button>
 
             </div>
 
