@@ -1,90 +1,112 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-  const teachersRow = document.querySelector(".teachers-row");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
+    console.log("JS is working 🚀");
 
-  const scrollAmount = teachersRow.clientWidth;
+    // ======================
+    // SCHOOL API (SLOGAN)
+    // ======================
+   const sloganElement = document.getElementById("slogan");
+const descriptionElement = document.getElementById("description");
 
-  // RIGHT ARROW
-  rightArrow.addEventListener("click", () => {
-    teachersRow.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth"
+fetch("/api/school")
+    .then(res => res.json())
+    .then(data => {
+
+        console.log("API data:", data);
+
+        if (sloganElement) {
+            sloganElement.innerText = data.slogan;
+        }
+
+        if (descriptionElement) {
+            descriptionElement.innerText = data.description;
+        }
+
+    })
+    .catch(err => {
+        console.log("Fetch error:", err);
     });
-  });
 
-  // LEFT ARROW
-  leftArrow.addEventListener("click", () => {
-    teachersRow.scrollBy({
-      left: -scrollAmount,
-      behavior: "smooth"
-    });
-  });
+    // ======================
+    // TEACHERS CAROUSEL
+    // ======================
+    const teachersRow = document.querySelector(".teachers-row");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
 
-  // AUTO SLIDE
-  function autoSlide() {
+    if (teachersRow && leftArrow && rightArrow) {
 
-    // if carousel reaches end, go back to start
-    if (
-      teachersRow.scrollLeft + teachersRow.clientWidth
-      >= teachersRow.scrollWidth - 5
-    ) {
+        const scrollAmount = teachersRow.clientWidth;
 
-      teachersRow.scrollTo({
-        left: 0,
-        behavior: "smooth"
-      });
+        rightArrow.addEventListener("click", () => {
+            teachersRow.scrollBy({
+                left: scrollAmount,
+                behavior: "smooth"
+            });
+        });
 
-    } else {
+        leftArrow.addEventListener("click", () => {
+            teachersRow.scrollBy({
+                left: -scrollAmount,
+                behavior: "smooth"
+            });
+        });
 
-      teachersRow.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
+        function autoSlide() {
+            if (
+                teachersRow.scrollLeft + teachersRow.clientWidth >=
+                teachersRow.scrollWidth - 5
+            ) {
+                teachersRow.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                teachersRow.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            }
+        }
 
+        setInterval(autoSlide, 3000);
     }
-  }
 
-  // move every 3 seconds
-  setInterval(autoSlide, 3000);
 
-document.addEventListener("DOMContentLoaded", function () {
-
+    // ======================
+    // LOGIN MODAL
+    // ======================
     const modal = document.getElementById("loginModal");
     const openBtn = document.querySelector(".login-btn");
     const closeBtn = document.querySelector(".modal-content span");
     const form = document.getElementById("loginForm");
 
-    // OPEN
-    openBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-    });
+    if (modal && openBtn && closeBtn && form) {
 
-    // CLOSE
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+        openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "flex";
+        });
 
-    // CLOSE OUTSIDE
-    window.addEventListener("click", function (e) {
-        if (e.target === modal) {
+        closeBtn.addEventListener("click", () => {
             modal.style.display = "none";
-        }
-    });
+        });
 
-    // LOGIN
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-        if (username === "student" && password === "1234") {
-            window.location.href = "student-dashboard/student-dashboard.html";
-        } else {
-            alert("Invalid login details");
-        }
-    });
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "student" && password === "1234") {
+                window.location.href = "student-dashboard/student-dashboard.html";
+            } else {
+                alert("Invalid login details");
+            }
+        });
+    }
 
 });
